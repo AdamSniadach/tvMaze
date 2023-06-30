@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TV Shows</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <% shows.forEach(function(show) { %>
+    <div class="show">
+      <img src="/<%= show.poster %>" alt="<%= show.title %>" class="poster" />
+      <h2><%= show.title %></h2>
+      <p>Seasons: <%= show.seasons %></p>
+      <p>Episodes: <%= show.episodes %></p>
+      <p>Year: <%= show.year %></p>
+      <p>Cast: <%= show.cast.join(', ') %></p>
+      <p>Type: <%= show.type %></p>
+      <p>Rating: <%= show.rating %></p>
+      <p>Directors: <%= show.directors.join(', ') %></p>
+    </div>
+    <% }); %>
+  </body>
+</html>
